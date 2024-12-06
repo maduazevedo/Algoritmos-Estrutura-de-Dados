@@ -1,5 +1,4 @@
 package LinkedQueue;
-import LinkedStack.Node;
 import interfaces.Queue;
 
 public class LinkedQueue implements Queue<Integer>{
