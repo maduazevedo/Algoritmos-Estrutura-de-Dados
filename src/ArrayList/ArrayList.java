@@ -100,11 +100,7 @@ public class ArrayList implements List<Integer>{
     }
 
     public void removeLastPosition() {
-        for (int i = this.indice - 1; i >= 0;) {
             this.indice--;
-            break;
-
-        }
     }
 
     public int getSize() {
@@ -127,7 +123,7 @@ public class ArrayList implements List<Integer>{
 
     public void duplicate() {
         if (this.indice >= this.lista.length) {
-            int tam = this.lista.length;
+            int tam = this.lista.length*2;
             int[] newArray = new int[tam];
 
             for (int i = 0; i < this.lista.length; i++) {

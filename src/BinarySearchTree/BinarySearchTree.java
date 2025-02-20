@@ -14,10 +14,14 @@ public class BinarySearchTree implements BinaryTree<Integer> {
 
 	@Override
 	public void add(Integer value) {
-		this.root = add(value, this.root);
+		if(this.root == null){
+			this.root = new Node(value);
+		}else{
+			add(value, this.root);
+		}
 	}
 
-	public Node add(Integer value, Node node) {
+	private Node add(Integer value, Node node) {
 		if (node == null) {
 			this.size++;
 			return new Node(value);
